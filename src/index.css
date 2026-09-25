@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root {
+  --text: #17212b;
+  --text-h: #08060d;
+  --bg: #f8f8f5;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #f6c544;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: 'DM Sans', sans-serif;
+  --heading: 'Space Grotesk', sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
+
+@media (max-width: 800px) {
+  .marquee-track {
+    justify-content: flex-start !important;
+    width: max-content !important;
+    min-width: max-content !important;
+    padding-left: 20px;
+  }
+
+  .marquee-track span,
+  .marquee-track i {
+    flex: 0 0 auto !important;
+  }
+}
+
+.hero .image-frame {
+  background: linear-gradient(145deg, #eef2ed 0%, #dbe5e1 100%) !important;
+}
+
+.hero .image-frame img {
+  visibility: hidden;
+}
+
+.hero .image-frame::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: min(45%, 230px);
+  aspect-ratio: 0.78;
+  transform: translate(-50%, -50%) rotate(-4deg);
+  border: 1px solid #d7ddd8;
+  border-radius: 13px;
+  background:
+    radial-gradient(circle at 38% 48%, #193b59 0 7px, transparent 8px),
+    radial-gradient(circle at 62% 48%, #193b59 0 7px, transparent 8px),
+    linear-gradient(#fafbf7, #f0f3ed);
+  box-shadow: 16px 20px 0 #193b5912, 0 18px 40px #193b5922;
+}
+
+.hero .image-frame::after {
+  background: radial-gradient(circle at 50% 50%, #f6c544 0 3px, transparent 4px);
+  z-index: 2;
+}
+
+.hero .image-frame {
+  background-image: url('https://images.unsplash.com/photo-1592424002053-21f369ad7f6c?auto=format&fit=crop&w=1200&q=85') !important;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero .image-frame::before {
+  display: none;
+}
+
+.hero .image-frame::after {
+  background: linear-gradient(160deg, transparent 50%, rgba(12, 37, 55, .5));
+}
+
+.hero .image-frame img {
+  visibility: visible;
+  content: url('https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=1200');
+}
+
+.why-section {
+  display: none !important;
+}
+
+.process {
+  display: none !important;
+}
+
+.topbar-content > a {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.topbar-content > a,
+.hero-actions .text-link,
+.contact-details a[href^='tel:'] strong {
+  font-size: 0;
+}
+
+.topbar-content > a::after,
+.hero-actions .text-link::after,
+.contact-details a[href^='tel:'] strong::after {
+  content: '886 221 993';
+  font-size: 13px;
+  letter-spacing: .02em;
+}
+
+.topbar-content > a::after {
+  color: #ffffff;
+}
+
+.footer-bottom span:last-child {
+  font-size: 0;
+}
+
+.footer-bottom span:last-child::after {
+  content: 'tani-elektryk.pl';
+  font-size: 10px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.brand > span:last-child {
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+.brand > span:last-child small {
+  display: none;
+}
+
+.brand > span:last-child::after {
+  content: 'tani-elektryk.pl';
+  font: 700 17px/1 'Space Grotesk', sans-serif;
+  letter-spacing: -.04em;
+  color: var(--blue);
+}
+
+.footer .brand > span:last-child::after {
+  color: #ffffff !important;
+}
+
+.contact-details small,
+.contact-details strong {
+  color: #ffffff !important;
+}
+
+.nav-links a {
+  color: var(--blue);
+}
+
+.topbar-note {
+  display: none !important;
+}
