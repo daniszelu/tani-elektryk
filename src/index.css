@@ -232,6 +232,29 @@ code {
   color: #ffffff !important;
 }
 
+.hero .image-frame {
+  background: #ffffff !important;
+}
+
+.hero .image-frame img,
+.hero .image-label {
+  display: none !important;
+}
+
+.hero .image-frame::before {
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: 1;
+  inset: 15% 28%;
+  background: var(--yellow);
+  clip-path: polygon(56% 0, 8% 54%, 43% 54%, 28% 100%, 92% 35%, 57% 35%);
+}
+
+.hero .image-frame::after {
+  display: none;
+}
+
 .contact-details small,
 .contact-details strong {
   color: #ffffff !important;
