@@ -255,6 +255,39 @@ code {
   display: none;
 }
 
+.hero {
+  position: relative;
+  display: block;
+  min-height: 540px;
+  padding: 118px 0 110px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: 15%;
+  width: 280px;
+  height: 380px;
+  transform: translateY(-50%) rotate(8deg);
+  background: var(--yellow);
+  opacity: .1;
+  clip-path: polygon(56% 0, 8% 54%, 43% 54%, 28% 100%, 92% 35%, 57% 35%);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.hero-visual {
+  display: none !important;
+}
+
 .contact-details small,
 .contact-details strong {
   color: #ffffff !important;
