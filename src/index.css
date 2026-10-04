@@ -121,16 +121,23 @@ code {
 }
 
 .brand-mark {
+  position: relative;
   background: transparent !important;
   border-radius: 0 !important;
-  color: var(--yellow) !important;
+  color: transparent !important;
 }
 
 .brand .brand-mark svg {
-  width: 30px;
-  height: 30px;
-  fill: var(--yellow) !important;
-  stroke: var(--yellow) !important;
+  display: none !important;
+}
+
+.brand .brand-mark::before {
+  content: '';
+  display: block;
+  width: 26px;
+  height: 32px;
+  background: #f6c544;
+  clip-path: polygon(62% 0, 17% 54%, 46% 54%, 34% 100%, 87% 36%, 57% 36%);
 }
 
 .hero .image-frame {
