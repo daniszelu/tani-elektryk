@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
 :root {
   --text: #17212b;
   --text-h: #08060d;
@@ -12,8 +12,8 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: 'DM Sans', sans-serif;
-  --heading: 'Space Grotesk', sans-serif;
+  --sans: 'Manrope', sans-serif;
+  --heading: 'Manrope', sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -203,24 +203,6 @@ code {
   font-weight: 700;
 }
 
-.topbar-content > a,
-.hero-actions .text-link,
-.contact-details a[href^='tel:'] strong {
-  font-size: 0;
-}
-
-.topbar-content > a::after,
-.hero-actions .text-link::after,
-.contact-details a[href^='tel:'] strong::after {
-  content: '886 221 993';
-  font-size: 13px;
-  letter-spacing: .02em;
-}
-
-.topbar-content > a::after {
-  color: #ffffff;
-}
-
 .footer-bottom span:last-child {
   font-size: 0;
 }
@@ -345,6 +327,13 @@ code {
   display: none !important;
 }
 
+.site-shell .hero,
+.site-shell *,
+.site-shell *::before,
+.site-shell *::after {
+  font-family: 'Manrope', sans-serif !important;
+}
+
 .section {
   padding-top: 96px;
   padding-bottom: 100px;
@@ -381,6 +370,30 @@ code {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.services.section {
+  position: relative;
+  isolation: isolate;
+  padding: 44px 0 48px;
+  background: #ffffff;
+}
+
+.services .service-grid {
+  gap: 16px;
+  border: 0;
+}
+
+.services .service-card {
+  border: 1px solid var(--line);
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0 -50vw;
+  background: #ffffff;
+}
+
 @media (max-width: 1000px) {
   .services .service-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -388,6 +401,11 @@ code {
 }
 
 @media (max-width: 600px) {
+  .services.section {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+
   .services .service-grid {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -427,3 +445,13 @@ code {
   font-size: 16px;
   line-height: 1.55;
 }
+
+@media (max-width: 800px) {
+  .nav-links .nav-call {
+    justify-content: flex-start;
+    margin-top: 0;
+    padding: 13px 0 !important;
+    background: transparent !important;
+  }
+}
+
