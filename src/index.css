@@ -377,6 +377,16 @@ code {
   background: #ffffff;
 }
 
+.site-shell .hero {
+  padding-top: 44px;
+  padding-bottom: 48px;
+}
+
+.site-shell .contact-section {
+  padding-top: 44px;
+  padding-bottom: 48px;
+}
+
 .services .service-grid {
   gap: 16px;
   border: 0;
@@ -402,6 +412,16 @@ code {
 
 @media (max-width: 600px) {
   .services.section {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+
+  .site-shell .hero {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+
+  .site-shell .contact-section {
     padding-top: 32px;
     padding-bottom: 40px;
   }
