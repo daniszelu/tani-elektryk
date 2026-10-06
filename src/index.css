@@ -475,3 +475,16 @@ code {
   }
 }
 
+.contact-form .form-error {
+  margin: 0 0 14px;
+  color: #a22d25;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.contact-form .button:disabled {
+  cursor: wait;
+  opacity: .68;
+  transform: none;
+}
+
