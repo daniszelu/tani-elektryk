@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tani-elektryk.pl/sitemap.xml
