@@ -409,6 +409,55 @@ code {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.hero-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: -10px 0 22px;
+}
+
+.benefit-pill {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 7px 12px;
+  color: var(--blue);
+  background: #ffffff;
+  border: 1px solid #dce4e1;
+  border-radius: 999px;
+  box-shadow: 0 2px 7px #193b590a;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.benefit-pill svg {
+  flex: 0 0 auto;
+  color: #c18a00;
+}
+
+a.benefit-pill:hover {
+  background: #fff8e3;
+}
+
+@media (max-width: 600px) {
+  .hero-benefits {
+    gap: 8px;
+    margin-top: -12px;
+    margin-bottom: 8px;
+  }
+
+  .benefit-pill {
+    min-height: 34px;
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+}
+
 .services.section {
   position: relative;
   isolation: isolate;
