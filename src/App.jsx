@@ -118,7 +118,7 @@ function App() {
               we Wrocławiu i okolicach.
             </p>
             <a className='button button-primary phone-cta' href='tel:+48886221993'>
-              <Zap size={19} strokeWidth={2.5} /> 886 221 993
+              <Phone size={19} /> 886 221 993 <Zap size={19} strokeWidth={2.5} />
             </a>
           </div>
           <div className='hero-visual reveal reveal-delay'>
