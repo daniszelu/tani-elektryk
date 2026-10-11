@@ -18,7 +18,8 @@ import {
   ShieldCheck,
   Sparkles,
   Wrench,
-  X
+  X,
+  Zap
 } from 'lucide-react'
 import './App.css'
 
@@ -116,6 +117,9 @@ function App() {
               <strong className='sep-inline'>uprawnieniami SEP</strong> dla mieszkań, domów i firm
               we Wrocławiu i okolicach.
             </p>
+            <a className='button button-primary phone-cta' href='tel:+48886221993'>
+              <Zap size={19} strokeWidth={2.5} /> 886 221 993
+            </a>
           </div>
           <div className='hero-visual reveal reveal-delay'>
             <div className='image-frame'>
