@@ -167,7 +167,7 @@ function App() {
               <span>
                 <MapPin size={14} /> Wrocław i okolice
               </span>
-              <i />
+              <i className='marquee-loop-separator' />
             </div>
             <div className='marquee-group marquee-group-copy' aria-hidden='true'>
               <span>
@@ -189,7 +189,7 @@ function App() {
               <span>
                 <MapPin size={14} /> Wrocław i okolice
               </span>
-              <i />
+              <i className='marquee-loop-separator' />
             </div>
           </div>
         </div>

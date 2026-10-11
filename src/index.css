@@ -132,7 +132,6 @@ code {
     align-items: center;
     justify-content: flex-start;
     gap: 30px;
-    padding-right: 30px;
   }
 
   .marquee-group span,
@@ -149,8 +148,18 @@ code {
   display: none;
 }
 
+.marquee-loop-separator {
+  display: none;
+}
+
 @keyframes mobile-marquee-scroll {
   to { transform: translateX(-50%); }
+}
+
+@media (max-width: 800px) {
+  .marquee-loop-separator {
+    display: block;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -575,4 +584,3 @@ a.benefit-pill:hover {
   opacity: .68;
   transform: none;
 }
-
