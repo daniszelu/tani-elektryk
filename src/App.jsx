@@ -17,6 +17,7 @@ import {
   Plug,
   ShieldCheck,
   Sparkles,
+  Star,
   Wrench,
   X,
   Zap
@@ -95,6 +96,9 @@ function App() {
         <nav className={menuOpen ? 'nav-links is-open' : 'nav-links'}>
           <a href='#uslugi' onClick={closeMenu}>
             Usługi
+          </a>
+          <a href='#opinie' onClick={closeMenu}>
+            Opinie
           </a>
           <a href='#kontakt' onClick={closeMenu}>
             Kontakt
@@ -323,6 +327,49 @@ function App() {
               <span>03</span>
               <h3>Robimy swoje</h3>
               <p>Przyjeżdżamy na czas, działamy sprawnie i zostawiamy po sobie porządek.</p>
+            </div>
+          </div>
+        </section>
+        <section className='google-reviews' id='opinie'>
+          <div className='container google-reviews-layout'>
+            <div className='google-review-copy'>
+              <p className='kicker'>Opinie klientów</p>
+              <h2>
+                Twoja opinia
+                <br />
+                <span>ma znaczenie.</span>
+              </h2>
+              <p>
+                Korzystałeś z naszych usług? Podziel się swoim doświadczeniem w Google — pomożesz
+                innym znaleźć sprawdzonego elektryka.
+              </p>
+              <a
+                className='button button-primary google-review-button'
+                href='https://share.google/ONXLwIHcqHyBUvgQV'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Oceń nas w Google <ArrowRight size={18} />
+              </a>
+            </div>
+            <div className='google-rating-card'>
+              <span className='google-rating-label'>Ocena w Google</span>
+              <div className='google-rating-score'>
+                <strong>5,0</strong>
+                <span className='google-rating-stars' role='img' aria-label='5 na 5 gwiazdek'>
+                  {Array.from({ length: 5 }, (_, index) => (
+                    <Star key={index} size={19} fill='currentColor' />
+                  ))}
+                </span>
+              </div>
+              <p>na podstawie 1 opinii</p>
+              <a
+                href='https://share.google/ONXLwIHcqHyBUvgQV'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Zobacz profil firmy <ArrowRight size={16} />
+              </a>
             </div>
           </div>
         </section>
